@@ -6,10 +6,11 @@ function NewKombuchaForm(props){
   function handleSubmission(event){
     event.preventDefault();
     props.newItem({name: event.target.name.value, brand:event.target.brand.value, price:event.target.price.value, abv:event.target.abv.value,qty:124, id: v4()});
+    document.getElementById('newForm').reset();
   }
   return(
     <React.Fragment>
-      <form onSubmit={handleSubmission}>
+      <form id='newForm' onSubmit={handleSubmission}>
         <label>Name: <input type='text' name='name' placeholder='Name' required/></label>
         <br/>
         <label>Brand: <input type='text' name='brand' placeholder='Brand'required/></label>

@@ -5,7 +5,7 @@ import KombuchaCard from './KombuchaCard';
 function KombuchaList(props){
   return(
     <div id='list'>
-      <h3>List</h3>
+      <h2>Kombucha List</h2>
       <div className ="card" onClick={() => props.newItem('form',0)}>
         <h4>+ new Kombucha</h4>
       </div>

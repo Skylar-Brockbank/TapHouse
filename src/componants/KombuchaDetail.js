@@ -6,7 +6,7 @@ function KombuchaDetail(props){
   if(props.target.qty >0){
     sell=<button onClick={()=>props.sell(props.dex)}>Sell</button>;
   }else{
-    sell=<p id='conflict'>Out Of Stock</p>
+    sell=<p className='conflict'>Out Of Stock</p>
   }
   return(
     <React.Fragment>

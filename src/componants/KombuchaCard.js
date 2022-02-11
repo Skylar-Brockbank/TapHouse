@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 function KombuchaCard(props){
   let q = null;
   if(props.target.qty >0){
-    q=props.target.qty;
+    q=<p>Qty: {props.target.qty}</p>;
   }else{
-    q="Out of Stock";
+    q=<p className='conflict'>Out of Stock</p>;
   }
   return(
     <div className='card' onClick={()=> props.imethod('detail', props.dex)}>
       {console.log(props.dex)}
       <h3>{props.target.name}</h3>
-      <p>{q}</p>
+      {q}
     </div>
   );
 }
