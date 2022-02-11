@@ -15,10 +15,10 @@ class App extends React.Component {
   }
 
   render(){
-    const main = null;
+    let main = null;
     if(this.state.MainContent === 'form'){
       main = <NewKombuchaForm 
-        new = {this.handleNewKombucha}
+        newItem = {this.handleNewKombucha}
       />;
     }else{
       main = <KombuchaDetail 

@@ -11,14 +11,19 @@ function NewKombuchaForm(props){
     <React.Fragment>
       <form onSubmit={handleSubmission}>
         <label>Name: <input type='text' name='name' placeholder='Name'/></label>
+        <br/>
         <label>Brand: <input type='text' name='brand' placeholder='Brand'/></label>
+        <br/>
         <label>price: <input type='number' name='price' min='0'/></label>
+        <br/>
         <label>ABV: <input type='number' name='abv' min='1' max='100'/></label>
+        <br/>
         <button type='submit'>submit</button>
       </form>
     </React.Fragment>
     )
 }
+export default NewKombuchaForm;
 
 NewKombuchaForm.propTypes ={
   new: PropTypes.func
