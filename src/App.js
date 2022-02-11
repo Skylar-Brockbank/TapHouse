@@ -1,5 +1,7 @@
 import React from 'react';
 import KombuchaList from './KombuchaList';
+import KombuchaDetail from './KombuchaDetail';
+import NewKombuchaForm from './NewKombuchaForm';
 
 class App extends React.Component {
 
@@ -15,12 +17,12 @@ class App extends React.Component {
   render(){
     const main = null;
     if(this.state.MainContent === 'form'){
-      main = <newKombuchaForm 
+      main = <NewKombuchaForm 
         new = {this.handleNewKombucha}
       />;
     }else{
       main = <KombuchaDetail 
-        target = {this.state.TargetIndex}
+        target = {this.state.MasterArray[this.state.TargetIndex]}
         sell = {this.handleDecrement}
         restock = {this.setQuantity}
       />;
