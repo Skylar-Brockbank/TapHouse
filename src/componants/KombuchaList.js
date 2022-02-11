@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import KombuchaCard from './KombuchaCard';
 
 function KombuchaList(props){
   return(
-    <React.Fragment>
+    <div id='list'>
       <h3>List</h3>
-      <div className ="card" onClick={() => props.newItem('form')}>
+      <div className ="card" onClick={() => props.newItem('form',0)}>
         <h4>+ new Kombucha</h4>
       </div>
       {/* foreach statement that will make kombuchaCards */}
-    </React.Fragment>
+      {props.list.map((x,index)=> <KombuchaCard dex={index} imethod={props.newItem} key={x.id} target={x}/>)}
+    </div>
     );
 }
 export default KombuchaList;

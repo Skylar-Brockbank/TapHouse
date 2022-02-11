@@ -21,7 +21,9 @@ class App extends React.Component {
         newItem = {this.handleNewKombucha}
       />;
     }else{
-      main = <KombuchaDetail 
+      console.log(this.state.TargetIndex)
+      main = <KombuchaDetail
+        dex={this.state.TargetIndex}
         target = {this.state.MasterArray[this.state.TargetIndex]}
         sell = {this.handleDecrement}
         restock = {this.setQuantity}
@@ -33,9 +35,11 @@ class App extends React.Component {
         <div id='PrimaryDisplayArea'>
           <KombuchaList 
             list={this.state.MasterArray}
-            new={this.setMainContent}
+            newItem={this.setMainContent}
           />
-          {main}
+          <div id='main'>
+            {main}
+          </div>
         </div>
       </React.Fragment>
       
@@ -45,15 +49,17 @@ class App extends React.Component {
 
   setQuantity = (index, qty) => {
     const transit = [...this.state.MasterArray];
-    transit[index].quantity = qty;
+    transit[index].qty = qty;
     this.setState({
       MasterArray: transit
     });
   };
 
   handleDecrement = (index) => {
-    const q = this.state.MasterArray[index]-1;
-    this.setQuantity(index,q);
+    console.log(index)
+    const q = this.state.MasterArray[index];
+    // q.qty = parseInt(q.qty)-1;
+    this.setQuantity(index,q.qty-1);
   };
 
   handleNewKombucha = (entry) => {
@@ -63,8 +69,9 @@ class App extends React.Component {
     });
   };
 
-  setMainContent = (form, index) => {
-    if(form){
+  setMainContent = (view, index) => {
+    console.log(this.state.MasterArray);
+    if(view==='form'){
       this.setState({
         MainContent: 'form'
       });

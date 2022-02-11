@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#PrimaryDisplayArea {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 1em;
+  padding: 1em;
+}
+#PrimaryDisplayArea > div {
+  background-color: green;
+}
+#list {
+  padding: 1em;
+}
+#main {
+  padding: 1em;
+}
