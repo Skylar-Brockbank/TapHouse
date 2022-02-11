@@ -31,7 +31,7 @@ class App extends React.Component {
     }
     return (
       <React.Fragment>
-        <h2>Page Title</h2>
+        <h1 id='title'>Page Title</h1>
         <div id='PrimaryDisplayArea'>
           <KombuchaList 
             list={this.state.MasterArray}

@@ -1,4 +1,9 @@
+
+
+
 body {
+  color:rgb(0, 49, 0);
+  background-color: rgb(255, 233, 202);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -6,7 +11,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+#title {
+  margin:.25em;
+  font-size:4em;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -18,11 +26,36 @@ code {
   padding: 1em;
 }
 #PrimaryDisplayArea > div {
-  background-color: green;
+  background-color: rgb(130, 204, 60);
+  border-radius: 1em;
 }
 #list {
   padding: 1em;
 }
 #main {
   padding: 1em;
+}
+#main h5{
+  margin: .5em;
+}
+#main button {
+  height: 4em;
+  width: 8em;
+  margin:.5em;
+  background-color:antiquewhite;
+  font-weight: bold;
+  border: none;
+  border-radius:1em;
+}
+#main button:hover {
+  background-color: rgb(255, 195, 82);
+}
+.card {
+  padding: 1em;
+  background-color:antiquewhite;
+  border-radius: 1em;
+  margin: 1em;
+}
+.card:hover {
+  background-color: rgb(255, 195, 82);
 }

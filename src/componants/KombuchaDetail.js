@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function KombuchaDetail(props){
   return(
     <React.Fragment>
-      <h2>{props.target.name}</h2>
+      <h1>{props.target.name}</h1>
       <hr/>
       <h5>Brand: {props.target.brand}</h5>
       <br/>
