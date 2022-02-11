@@ -10,6 +10,7 @@ function NewKombuchaForm(props){
   }
   return(
     <React.Fragment>
+      <h2>Add new Kombucha</h2>
       <form id='newForm' onSubmit={handleSubmission}>
         <label>Name: <input type='text' name='name' placeholder='Name' required/></label>
         <br/>
