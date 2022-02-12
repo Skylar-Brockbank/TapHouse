@@ -10,7 +10,7 @@ function KombuchaCard(props){
   }
   return(
     <div className='card' onClick={()=> props.imethod('detail', props.dex)}>
-      {console.log(props.dex)}
+
       <h3>{props.target.name}</h3>
       {q}
     </div>

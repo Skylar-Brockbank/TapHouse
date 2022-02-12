@@ -21,7 +21,6 @@ class App extends React.Component {
         newItem = {this.handleNewKombucha}
       />;
     }else{
-      console.log(this.state.TargetIndex)
       main = <KombuchaDetail
         dex={this.state.TargetIndex}
         target = {this.state.MasterArray[this.state.TargetIndex]}
@@ -56,7 +55,6 @@ class App extends React.Component {
   };
 
   handleDecrement = (index) => {
-    console.log(index)
     const q = this.state.MasterArray[index];
     // q.qty = parseInt(q.qty)-1;
     this.setQuantity(index,q.qty-1);
@@ -70,7 +68,6 @@ class App extends React.Component {
   };
 
   setMainContent = (view, index) => {
-    console.log(this.state.MasterArray);
     if(view==='form'){
       this.setState({
         MainContent: 'form'
